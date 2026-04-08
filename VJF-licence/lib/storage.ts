@@ -51,7 +51,7 @@ export async function writeResults(data: Result[]): Promise<void> {
     access: "public",
     contentType: "application/json",
     addRandomSuffix: false,
- 
+    allowOverwrite: true,
   });
 }
 
