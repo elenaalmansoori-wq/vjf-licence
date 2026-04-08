@@ -1,8 +1,8 @@
 export default function HomePage() {
   return (
     <div
-      className="home-bg"
       style={{
+        position: "relative",
         backgroundImage: "url('/pozadi.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -13,7 +13,15 @@ export default function HomePage() {
         padding: "40px 20px",
       }}
     >
-      <div style={{ maxWidth: 920, margin: "0 auto" }}>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(245, 235, 215, 0.78)",
+          pointerEvents: "none",
+        }}
+      />
+      <div style={{ position: "relative", maxWidth: 920, margin: "0 auto" }}>
         <div className="card" style={{ background: "rgba(255,255,255,0.92)" }}>
           <h1>Licencování pro virtuální jezdeckou federaci</h1>
           <p>
