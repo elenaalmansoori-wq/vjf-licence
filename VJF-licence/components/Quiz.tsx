@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import type { Question, TestKey } from "@/lib/questions";
 
-type Props = { test: TestKey; title: string; photo: string; alt: string; questions: Question[] };
+type Props = { test: TestKey; title: string; photo: string; alt: string; photoPosition?: string; questions: Question[] };
 
-export default function Quiz({ test, title, photo, alt, questions }: Props) {
+
+export default function Quiz({ test, title, photo, alt, photoPosition, questions }: Props) {
   const [phase, setPhase] = useState<"intro" | "form" | "quiz" | "done">("intro");
   const [nick, setNick] = useState("");
   const [email, setEmail] = useState("");
@@ -72,7 +73,7 @@ export default function Quiz({ test, title, photo, alt, questions }: Props) {
   if (phase === "intro") {
     return (
       <div>
-        <img src={photo} alt={alt} className="hero-photo" />
+        <img src={photo} alt={alt} className="hero-photo" style={{ objectPosition: photoPosition || "center" }} />
         <div className="card">
           <h1>{title}</h1>
           <p>Kliknutím níže spustíte přihlášení k testu. Test trvá 1 hodinu a obsahuje 20 otázek.</p>
