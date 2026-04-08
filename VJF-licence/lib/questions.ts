@@ -2,7 +2,7 @@ export type Question = { q: string; options: [string, string, string]; correct: 
 export type TestKey = "veterinar" | "kovar" | "trener";
 
 export const TEST_META: Record<TestKey, { title: string; photo: string; alt: string }> = {
- veterinar: {
+  veterinar: {
     title: "Veterinář",
     photo: "/veterinar.jpg",
     alt: "Veterinář pracující s koněm",
@@ -17,6 +17,7 @@ export const TEST_META: Record<TestKey, { title: string; photo: string; alt: str
     photo: "/trener.jpg",
     alt: "Trenér dostihových koní",
   },
+};
 
 export const QUESTIONS: Record<TestKey, Question[]> = {
   veterinar: [
