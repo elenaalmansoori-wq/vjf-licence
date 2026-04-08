@@ -1,11 +1,12 @@
 export type Question = { q: string; options: [string, string, string]; correct: 0 | 1 | 2 };
 export type TestKey = "veterinar" | "kovar" | "trener";
 
-export const TEST_META: Record<TestKey, { title: string; photo: string; alt: string }> = {
+export const TEST_META: Record<TestKey, { title: string; photo: string; alt: string; photoPosition?: string }> = {
   veterinar: {
     title: "Veterinář",
     photo: "/veterinar.jpg",
     alt: "Veterinář pracující s koněm",
+     photoPosition: "top",
   },
   kovar: {
     title: "Kovář",
